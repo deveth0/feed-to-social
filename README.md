@@ -21,7 +21,7 @@ It parses a feed from a blog or similar on a regular basis and publishes any new
 
 The prefered way to run this project is to use a prebuild Docker Image and configure the application using docker-compose.
 
-You can find an example `docker-compose.yml` in the project's root.
+You can find an example [docker-compose.yml](https://github.com/deveth0/feed-to-social/blob/master/docker-compose.yml) in the project's root which contains all configurations.
 
 ### Build and Run Spring Boot
 
