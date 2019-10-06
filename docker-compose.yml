@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  server:
+  feed2social:
     image: deveth0/feed-to-social
     environment:
       APP_SCHEDULER: 3600000
