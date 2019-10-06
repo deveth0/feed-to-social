@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  server:
+    image: deveth0/feed-to-social
+    environment:
+      APP_SCHEDULER: 3600000
+      JSON_URL: "https://YOUR_JSON_URL.json"
+      TWITTER_APIKEY:
+      TWITTER_APISECRET:
+      TWITTER_ACCESSTOKEN:
+      TWITTER_ACCESSTOKENSECRET:
