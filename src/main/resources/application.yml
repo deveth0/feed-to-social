@@ -1,0 +1,28 @@
+logging:
+  level:
+    ROOT: INFO
+    de.dev.eth0: DEBUG
+
+app:
+  # Scheduler Rate in ms
+  scheduler: 5000
+
+json:
+  url: https://YOUR_JSON_FEED
+  fields:
+    # Field in JSON which contains an ISO date
+    date: date
+    # Field in JSON which contains the URI
+    uri: uri
+    # Field in JSON which contains keywords as list/array
+    keywords: keywords
+    # List of fields that are used to create the tweet. First existing field with content is used
+    text:
+      - summary
+      - title
+
+twitter:
+  apiKey:
+  apiSecret:
+  accessToken:
+  accessTokenSecret:
