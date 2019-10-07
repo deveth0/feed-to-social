@@ -1,36 +1,36 @@
-package de.dev.eth0.feed2social.impl.service
+package de.dev.eth0.feed2social.impl.service.publisher.twitter
 
-import de.dev.eth0.feed2social.config.TwitterProperties
 import de.dev.eth0.feed2social.impl.model.FeedEntry
-import de.dev.eth0.feed2social.service.TwitterService
+import de.dev.eth0.feed2social.service.SocialPublisher
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 import twitter4j.Twitter
 import twitter4j.TwitterException
 import twitter4j.TwitterFactory
 import twitter4j.conf.ConfigurationBuilder
 
+/**
+ * Implementation of SocialPublisher which publishes to twitter
+ */
 @Service
-@Profile("!dummy")
+@ConditionalOnProperty("publisher.twitter.apikey")
 @EnableConfigurationProperties(TwitterProperties::class)
-class TwitterServiceImpl @Autowired constructor(
-    private val twitterProperties: TwitterProperties
-) : TwitterService {
+class TwitterPublisher @Autowired constructor(twitterProperties: TwitterProperties) : SocialPublisher {
 
-  private val log = LoggerFactory.getLogger(TwitterService::class.java)
+  private val log = LoggerFactory.getLogger(SocialPublisher::class.java)
 
   private val twitter: Twitter;
 
   init {
     val cb = ConfigurationBuilder();
     cb.setDebugEnabled(true)
-        .setOAuthConsumerKey(twitterProperties.apiKey)
-        .setOAuthConsumerSecret(twitterProperties.apiSecret)
-        .setOAuthAccessToken(twitterProperties.accessToken)
-        .setOAuthAccessTokenSecret(twitterProperties.accessTokenSecret);
+      .setOAuthConsumerKey(twitterProperties.apiKey)
+      .setOAuthConsumerSecret(twitterProperties.apiSecret)
+      .setOAuthAccessToken(twitterProperties.accessToken)
+      .setOAuthAccessTokenSecret(twitterProperties.accessTokenSecret);
     val tf = TwitterFactory(cb.build());
     twitter = tf.instance;
   }
@@ -43,7 +43,6 @@ class TwitterServiceImpl @Autowired constructor(
       log.warn("Could not publish tweet", ex);
     }
   }
-
 
   private fun buildTweet(entry: FeedEntry): String {
     val keywords = entry.keywords.joinToString(separator = " ") { "#$it" }

@@ -1,12 +1,14 @@
-package de.dev.eth0.feed2social.impl.service
+package de.dev.eth0.feed2social.impl.service.feeder.json
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 
+@ConditionalOnProperty("feed.json.url")
 @FeignClient(
     name = "json-feed-client",
-    url = "\${json.url}"
+    url = "\${feed.json.url}"
 )
 interface JsonFeedClient {
 

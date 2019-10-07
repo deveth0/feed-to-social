@@ -1,14 +1,16 @@
 /* Copyright (c) pro!vision GmbH. All rights reserved. */
-package de.dev.eth0.feed2social.config;
+package de.dev.eth0.feed2social.impl.service.feeder.json;
 
 import java.util.List;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
-@ConfigurationProperties("json")
+@ConfigurationProperties("feed.json")
+@ConditionalOnProperty("feed.json.url")
 @Validated
 public class JsonFeedProperties {
 

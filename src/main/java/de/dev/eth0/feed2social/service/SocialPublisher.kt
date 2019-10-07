@@ -3,11 +3,11 @@ package de.dev.eth0.feed2social.service
 import de.dev.eth0.feed2social.impl.model.FeedEntry
 
 /**
- * Interface for a Service which publishes Tweets
+ * Interface for Social Network Publisher
  */
-interface TwitterService {
+interface SocialPublisher {
   /**
-   * Build a tweet and publish it
+   * Publish the given Feed Entry
    */
   fun publish(entry: FeedEntry)
 }
