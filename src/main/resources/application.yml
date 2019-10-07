@@ -1,7 +1,7 @@
 logging:
   level:
     ROOT: INFO
-    de.dev.eth0: DEBUG
+    de.dev.eth0: INFO
 
 app:
   # Scheduler Rate in ms
