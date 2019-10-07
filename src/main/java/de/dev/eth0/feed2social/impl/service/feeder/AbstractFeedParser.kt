@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019 dev-eth0.de All rights reserved.
+ */
+
 package de.dev.eth0.feed2social.impl.service.feeder
 
 import de.dev.eth0.feed2social.impl.model.FeedEntry
@@ -17,11 +21,10 @@ abstract class AbstractFeedParser<T> {
       .filter { getEntryDate(it).isAfter(lastRun)}
       .filter { validateEntry(it) }
       .map{parseEntry(it)}
-      .filterNotNull()
       .toList()
   }
 
-  protected abstract fun parseEntry(entry: T): FeedEntry?
+  protected abstract fun parseEntry(entry: T): FeedEntry
 
   protected abstract fun validateEntry(entry: T): Boolean
 

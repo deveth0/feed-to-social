@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019 dev-eth0.de All rights reserved.
+ */
+
 package de.dev.eth0.feed2social.impl.service.feeder.json
 
 import de.dev.eth0.feed2social.impl.model.FeedEntry
@@ -17,11 +21,7 @@ open class JsonFeedParser : AbstractFeedParser<Map<String, Any>>() {
   @Autowired
   lateinit var jsonFeedProperties: JsonFeedProperties
 
-  override fun parseEntry(entry: Map<String, Any>): FeedEntry? {
-    // verify that all required field are in the map
-    if (!validateEntry(entry)) {
-      return null
-    }
+  override fun parseEntry(entry: Map<String, Any>): FeedEntry {
     val date = getEntryDate(entry)
     val uri = entry[jsonFeedProperties.fields.uri] as String
     val text = findText(entry)

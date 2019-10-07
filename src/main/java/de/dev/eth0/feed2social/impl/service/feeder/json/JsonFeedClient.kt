@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2019 dev-eth0.de All rights reserved.
+ */
+
 package de.dev.eth0.feed2social.impl.service.feeder.json
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty

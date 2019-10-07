@@ -1,7 +1,11 @@
+/*
+ * Copyright (c) 2019 dev-eth0.de All rights reserved.
+ */
+
 package de.dev.eth0.feed2social.impl.service
 
-import de.dev.eth0.feed2social.service.Feeder
 import de.dev.eth0.feed2social.service.Feed2SocialService
+import de.dev.eth0.feed2social.service.Feeder
 import de.dev.eth0.feed2social.service.SocialPublisher
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
@@ -27,9 +31,14 @@ class Feed2SocialServiceImpl : Feed2SocialService {
     log.info("Found new entries: $entries")
 
     entries.take(3).forEach { entry ->
-      publisher.forEach { it.publish(entry) }
+      publisher.forEach { pub ->
+        try {
+          pub.publish(entry)
+        } catch (e: Exception) {
+          log.error("Could not publish $entry with $pub")
+        }
+      }
     }
-
     lastRun = LocalDateTime.now()
   }
 }

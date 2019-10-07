@@ -1,4 +1,6 @@
-/* Copyright (c) pro!vision GmbH. All rights reserved. */
+/*
+ * Copyright (c) 2019 dev-eth0.de All rights reserved.
+ */
 package de.dev.eth0.feed2social.impl.service.feeder.rss;
 
 import javax.validation.constraints.NotBlank;
