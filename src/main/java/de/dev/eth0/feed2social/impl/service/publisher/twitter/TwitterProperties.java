@@ -1,11 +1,11 @@
 /* Copyright (c) pro!vision GmbH. All rights reserved. */
-package de.dev.eth0.feed2social.config;
+package de.dev.eth0.feed2social.impl.service.publisher.twitter;
 
 import javax.validation.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
-@ConfigurationProperties("twitter")
+@ConfigurationProperties("publisher.twitter")
 @Validated
 public class TwitterProperties {
 

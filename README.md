@@ -9,6 +9,7 @@ It parses a feed from a blog or similar on a regular basis and publishes any new
 
 ### Supported Parser
 
+* RSS Feed (see [RSS Feed](#rss-feed))
 * JSON Feed (see [JSON Feed](#json-feed))
 
 ### Supported Publisher
@@ -35,7 +36,7 @@ You can add the configuration to `application.yml` or provide all required confi
 
 ## Configuration
 
-All configurations are available using environment variables.
+All configurations can be found in `application.yml` and also passed as Environment Variables as documented below
 
 ### App
 
@@ -43,15 +44,21 @@ All configurations are available using environment variables.
 |---|---|---|
 | APP_SCHEDULER | Update rate for Feed in ms | 5000 |
 
+### RSS Feed
+
+| Config | Description  | Example |
+|---|---|---|
+| FEED_RSS_URL | Url of the RSS feed | http://example.com/index.xml |
+
 ### JSON Feed
 
 | Config | Description  | Example |
 |---|---|---|
-| JSON_URL | Url of the json feed | http://example.com/feed.json |
-| JSON_FIELDS_DATE | Field in json which contains the date (ISO) | date |
-| JSON_FIELDS_URI | Field in json which contains the uri of the entry | uri |
-| JSON_FIELDS_KEYWORDS | Field in json which contains keywords (used as hashtags) | keywords |
-| JSON_FIELDS_TEXT | List of fields that might contain text. First field with content is used. | text:<br>  - summary<br>   - title|
+| FEED_JSON_URL | Url of the json feed | http://example.com/feed.json |
+| FEED_JSON_FIELDS_DATE | Field in json which contains the date (ISO) | date |
+| FEED_JSON_FIELDS_URI | Field in json which contains the uri of the entry | uri |
+| FEED_JSON_FIELDS_KEYWORDS | Field in json which contains keywords (used as hashtags) | keywords |
+| FEED_JSON_FIELDS_TEXT | List of fields that might contain text. First field with content is used. | text:<br>  - summary<br>   - title|
 
 Example for an entry in json:
 
@@ -76,10 +83,10 @@ See [developer.twitter.com](https://developer.twitter.com/en/docs/basics/authent
 
 | Config | Description  | Example |
 |---|---|---|
-| TWITTER_APIKEY | Twitter Api Key |  |
-| TWITTER_APISECRET | Twitter Api Secret | |
-| TWITTER_ACCESSTOKEN | Twitter Access Token| |
-| TWITTER_ACCESSTOKENSECRET | Twitter Access Token Secret | |
+| PUBLISHER_TWITTER_APIKEY | Twitter Api Key |  |
+| PUBLISHER_TWITTER_APISECRET | Twitter Api Secret | |
+| PUBLISHER_TWITTER_ACCESSTOKEN | Twitter Access Token| |
+| PUBLISHER_TWITTER_ACCESSTOKENSECRET | Twitter Access Token Secret | |
 
 ## References
 

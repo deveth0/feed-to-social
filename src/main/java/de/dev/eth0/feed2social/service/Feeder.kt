@@ -4,9 +4,9 @@ import de.dev.eth0.feed2social.impl.model.FeedEntry
 import java.time.LocalDateTime
 
 /**
- * Interface for a Service, which reads information of a feed
+ * Interface for a Feeder
  */
-interface JsonFeedReaderService {
+interface Feeder {
 
   /**
    * @return list with all Feed Entries published after the given time
