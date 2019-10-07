@@ -7,7 +7,7 @@ app:
   # Scheduler Rate in ms
   scheduler: 5000
 
-# Configuration for the used feed
+# Configuration for JSON feed
 feed:
   json:
 #    url:
@@ -22,6 +22,10 @@ feed:
       text:
         - summary
         - title
+        -
+# Configuration for RSS Feed
+  rss:
+#   url:
 
 # Configuration for the used publishers
 publisher:

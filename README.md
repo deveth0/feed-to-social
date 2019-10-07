@@ -9,6 +9,7 @@ It parses a feed from a blog or similar on a regular basis and publishes any new
 
 ### Supported Parser
 
+* RSS Feed (see [RSS Feed](#rss-feed))
 * JSON Feed (see [JSON Feed](#json-feed))
 
 ### Supported Publisher
@@ -42,6 +43,12 @@ All configurations can be found in `application.yml` and also passed as Environm
 | Config | Description  | Example |
 |---|---|---|
 | APP_SCHEDULER | Update rate for Feed in ms | 5000 |
+
+### RSS Feed
+
+| Config | Description  | Example |
+|---|---|---|
+| FEED_RSS_URL | Url of the RSS feed | http://example.com/index.xml |
 
 ### JSON Feed
 
