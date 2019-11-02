@@ -163,7 +163,7 @@
         <version>1.7.0</version>
         <configuration>
           <to>
-            <image>docker.io/deveth0/feed-to-social</image>
+            <image>docker.io/deveth0/feed-to-social:${project.version}</image>
           </to>
         </configuration>
       </plugin>
