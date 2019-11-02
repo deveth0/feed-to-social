@@ -158,21 +158,14 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
       <plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>dockerfile-maven-plugin</artifactId>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+        <version>1.7.0</version>
         <configuration>
-          <repository>${docker.image.repository}/${docker.image.prefix}</repository>
-          <skip>false</skip>
-          <tag>latest</tag>
+          <to>
+            <image>docker.io/deveth0/feed-to-social</image>
+          </to>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.jetbrains.kotlin</groupId>
