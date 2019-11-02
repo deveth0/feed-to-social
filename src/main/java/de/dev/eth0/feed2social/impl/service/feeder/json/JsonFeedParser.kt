@@ -26,7 +26,7 @@ open class JsonFeedParser : AbstractFeedParser<Map<String, Any>>() {
     val uri = entry[jsonFeedProperties.fields.uri] as String
     val text = findText(entry)
     val keywords = (entry[jsonFeedProperties.fields.keywords] as? List<String>).orEmpty()
-    return FeedEntry(date, uri, text, keywords)
+    return createFeedEntry(date, uri, text, keywords);
   }
 
   override fun getEntryDate(entry: Map<String, Any>): LocalDateTime {
