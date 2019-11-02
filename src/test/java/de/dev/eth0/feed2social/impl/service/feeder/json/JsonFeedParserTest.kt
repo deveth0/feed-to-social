@@ -78,7 +78,7 @@ class JsonFeedParserTest(@Autowired val jsonFeedParser: JsonFeedParser) {
   }
 
   private fun parseEntries(jsonFile: String): List<FeedEntry> {
-    val entries = getFeed(testPostsPath)
+    val entries = getFeed(jsonFile)
     return jsonFeedParser.parseEntries(entries, LocalDateTime.MIN)
   }
 
