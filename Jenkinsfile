@@ -16,7 +16,7 @@ node() {
 Map config = [
     (STAGE_COMPILE): [
         (MAVEN): [
-            (MAVEN_ARGUMENTS): env.JOB_BASE_NAME.endsWith("-master") ? ["-Djib.to.tags=latest"] : []
+            (MAVEN_ARGUMENTS): env.JOB_BASE_NAME.endsWith("-master") ? ["-Djib.to.tags=latest"] : [],
             (MAVEN_GOALS): ["jib:build"]
         ]
     ],
