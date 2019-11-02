@@ -9,7 +9,6 @@
 import static de.provision.devops.jenkins.pipeline.utils.ConfigConstants.*
 import static io.wcm.devops.jenkins.pipeline.utils.ConfigConstants.*
 
-env.setProperty('DOCKER_HOST', 'tcp://192.168.2.16:2376')
 node() {
   sh("env")
 }
@@ -17,7 +16,7 @@ node() {
 Map config = [
     (STAGE_COMPILE): [
         (MAVEN): [
-            (MAVEN_GOALS): ["dockerfile:build", "dockerfile:tag", "dockerfile:push"]
+            (MAVEN_GOALS): ["jib:build"]
         ]
     ],
     (PROPERTIES)   : [
