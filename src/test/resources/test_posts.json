@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2019-11-01T20:00:00+02:00",
+    "keywords": [
+      "python",
+      "opencv"
+    ],
+    "summary": "It\u0026rsquo;s surprisingly easy to use a pretrained model for Object Detection in Images or Videos.",
+    "title": "Object Detection in Images and Videos using Python, OpenCV and YOLOv3",
+    "uri": "https://www.dev-eth0.de/2019/11/01/object-detection-in-images-and-videos-using-python-opencv-and-yolov3/"
+  },
+  {
+    "date": "2019-09-10T18:00:00+02:00",
+    "keywords": [
+      "react",
+      "typescript",
+      "javascript"
+    ],
+    "summary": "When combining TypeScript with React, some of the tutorials cannot be adapted that simple.\u003c/br\u003eIn this example I show how to use \u003ccode\u003ewithRouter\u003c/code\u003e to manipulate the history in a functional React component.",
+    "title": "Using withRouter in a TypeScript React Component",
+    "uri": "https://www.dev-eth0.de/2019/09/10/using-withrouter-in-a-typescript-react-component/"
+  },
+  {
+    "date": "2019-08-04T18:00:00+02:00",
+    "keywords": [
+      "docker",
+      "spring",
+      "kubernetes"
+    ],
+    "summary": "Now that we have packaged an existing Spring Boot application into a Docker Image, we can deploy it to a Kubernet cluster as well.",
+    "title": "Spring Boot Application in OpenShift / OKD",
+    "uri": "https://www.dev-eth0.de/2019/08/04/spring-boot-application-in-openshift-/-okd/"
+  }
+]
