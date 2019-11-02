@@ -15,7 +15,7 @@
 
   <groupId>de.dev.eth0.feed-to-social</groupId>
   <artifactId>feed-to-social</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0-SNAPSHOT</version>
   <name>feed-to-social</name>
   <description>Blog Feed to Social Platform</description>
 
