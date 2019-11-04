@@ -4,10 +4,12 @@
 package de.dev.eth0.feed2social.impl.service.publisher.twitter;
 
 import javax.validation.constraints.NotBlank;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
 
 @ConfigurationProperties("publisher.twitter")
+@ConditionalOnProperty("publisher.twitter.apikey")
 @Validated
 public class TwitterProperties {
 

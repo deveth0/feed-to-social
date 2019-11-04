@@ -8,29 +8,29 @@ app:
   scheduler: 5000
 
 # Configuration for JSON feed
-feed:
-  json:
+#feed:
+#  json:
 #    url:
-    fields:
-      # Field in JSON which contains an ISO date
-      date: date
-      # Field in JSON which contains the URI
-      uri: uri
-      # Field in JSON which contains keywords as list/array
-      keywords: keywords
-      # List of fields that are used to create the tweet. First existing field with content is used
-      text:
-        - summary
-        - title
-        -
+#    fields:
+#      # Field in JSON which contains an ISO date
+#      date: date
+#      # Field in JSON which contains the URI
+#      uri: uri
+#      # Field in JSON which contains keywords as list/array
+#      keywords: keywords
+#      # List of fields that are used to create the tweet. First existing field with content is used
+#      text:
+#        - summary
+#        - title
+
 # Configuration for RSS Feed
-  rss:
+#  rss:
 #   url:
 
 # Configuration for the used publishers
-publisher:
-  twitter:
-    apiKey:
-    apiSecret:
-    accessToken:
-    accessTokenSecret:
+#publisher:
+#  twitter:
+#    apiKey:
+#    apiSecret:
+#    accessToken:
+#    accessTokenSecret:
