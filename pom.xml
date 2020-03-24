@@ -9,7 +9,7 @@
   <parent>
     <groupId>de.pro-vision.maven.spring</groupId>
     <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-    <version>1-2.2.4</version>
+    <version>1-2.2.5</version>
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
 
