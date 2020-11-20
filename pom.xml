@@ -24,7 +24,7 @@
     <docker.image.repository>deveth0</docker.image.repository>
     <docker.image.prefix>feed-to-social</docker.image.prefix>
 
-    <kotlin.version>1.3.61</kotlin.version>
+    <kotlin.version>1.4.20</kotlin.version>
 
     <!-- distribution settings -->
     <distribution.releaseRepositoryId>nexus-deveth0</distribution.releaseRepositoryId>
